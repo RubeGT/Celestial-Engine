@@ -15,6 +15,16 @@ import flixel.addons.effects.FlxTrail;
 import flixel.input.keyboard.FlxKey;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
+
+#if hscript
+import hscript.Parser;
+import hscript.Interp;
+import hscript.Expr;
+#end
+
+#if hscript-iris
+import crowplexus.iris.Iris;
+#end
 import flixel.text.FlxText;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.math.FlxPoint;
@@ -35,7 +45,7 @@ import flixel.util.FlxSave;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.system.FlxAssets.FlxShader;
 
-#if (!flash && sys)
+#if (!flash && sys && MODS_ALLOWED)
 import flixel.addons.display.FlxRuntimeShader;
 #end
 
